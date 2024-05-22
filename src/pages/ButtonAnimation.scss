@@ -1,0 +1,138 @@
+$outline-border-width: 1px;
+$outline-border-color: rgb(255, 255, 255);
+$sec-outline-border-color: #e08821;
+$outline-button-padding: 10px 30px;
+$outline-text-color: rgb(255, 255, 255);
+$sec-outline-text-color: #e08821;
+$outline-transition-time: 1.5s;
+$outline-fade: 0.35s;
+$outline-active-scale: 1.05;
+
+.black-box{
+  background-color: black;
+  padding: 3px;
+  width: auto;
+  height: auto;
+}
+
+.draw-outline {
+  background-color: rgba(0, 0, 0, 0.374);
+  display: inline-block;
+  font-family: 'Marcellus SC', serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  display: inline-block;
+  padding: $outline-button-padding;
+  border: $outline-border-width $outline-border-color solid;
+  text-align: center;
+  text-decoration: none;
+  color: $outline-text-color;
+  position: relative;
+  transition: border-color 0.35s ease-in-out;
+  z-index: 1;
+
+  &-small{
+    padding: 10px 10px
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    box-sizing: content-box;
+    z-index: -1;
+    transition: transform 0.25s ease-in-out;
+    padding-left: $outline-border-width;
+  }
+
+  &:before {
+    top: -$outline-border-width;
+    left: -$outline-border-width;
+    border-top: $outline-border-width transparent solid;
+    border-right: $outline-border-width transparent solid;
+  }
+
+  &:after {
+    bottom: -$outline-border-width;
+    right: -$outline-border-width;
+    border-bottom: $outline-border-width transparent solid;
+    border-left: $outline-border-width transparent solid;
+  }
+
+  &:hover {
+    color: $sec-outline-text-color;
+    transition: color $outline-fade ease-in-out,
+      border-color $outline-fade ease-in-out;
+    border-color: $outline-border-color;
+    animation: outline-reset $outline-fade 1 forwards;
+    &:before {
+      animation: top-right-border $outline-transition-time/2 1 $outline-fade
+        forwards;
+    }
+    &:after {
+      animation: bottom-left-border $outline-transition-time/2 1
+        ($outline-transition-time/2) + $outline-fade forwards;
+    }
+  }
+  &--tandem:hover {
+    &:after {
+      animation: bottom-left-border $outline-transition-time/2 1 $outline-fade
+        forwards;
+    }
+  }
+  &:active {
+    &:before,
+    &:after {
+      transform: scale($outline-active-scale);
+    }
+  }
+}
+
+@keyframes outline-reset {
+  0% {
+    border-color: $outline-border-color;
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+
+@keyframes top-right-border {
+  0% {
+    border-color: $sec-outline-border-color;
+    width: 0px;
+    height: 0;
+  }
+  50% {
+    width: 100%;
+    height: 0;
+  }
+  100% {
+    border-color: $sec-outline-border-color;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@keyframes bottom-left-border {
+  0% {
+    border-color: $sec-outline-border-color;
+    width: 0px;
+    height: 0;
+  }
+  50% {
+    width: 100%;
+    height: 0;
+  }
+  100% {
+    border-color: $sec-outline-border-color;
+    width: 100%;
+    height: 100%;
+  }
+}

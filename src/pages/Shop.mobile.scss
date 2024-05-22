@@ -1,0 +1,45 @@
+@media only screen and (max-width: 667px) {
+  .hidden {
+    display: none;
+  }
+
+  .divOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+  }
+  
+  .divProduct {
+    img {
+      text-align: center;
+      height: 200;
+      padding-left: 1em;
+    }
+
+    .divProductImage {
+      text-align: center;
+    }
+
+    .divProductContent {
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+
+    position: relative;
+    width: 95%;
+    min-height: 375px;
+    display: inline-block;
+    border-radius: 1em;
+    margin-left: 2.5%;
+    margin-right: 2.5;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding-top: 1em;
+    box-shadow: inset 0px 0px 10px #00a2ff;
+    color: #FFFFFF;
+  }
+}

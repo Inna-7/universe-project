@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Exodus: Our Universe Marketplace"
+    />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300i,400,400i,700%7cMarcellus+SC" rel="stylesheet" />
+
+    <!-- FontAwesome -->
+    <script defer src="/vendor/fontawesome-free/js/all.js"></script>
+    <script defer src="/vendor/fontawesome-free/js/v4-shims.js"></script>
+
+    <!-- IonIcons -->
+    <link rel="stylesheet" href="ionicons.min.css">
+
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Exodus: Our Universe</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <!-- START: Page Preloader
+    <div class="nk-preloader">
+        <!--
+             Preloader animation
+             data-close-... data used for closing preloader
+             data-open-...  data used for opening preloader
+
+        <div class="nk-preloader-bg"
+             style="background-color: #000;"
+             data-close-frames="23"
+             data-close-speed="1.2"
+             data-close-sprites="./images/preloader-bg.png"
+             data-open-frames="23"
+             data-open-speed="1.2"
+             data-open-sprites="./images/preloader-bg-bw.png">
+        </div>
+
+        <div class="nk-preloader-content">
+            <div>
+                <img class="nk-img" src="/images/logo1.png" alt="Exodus: Our Universe" width="170">
+                <div class="nk-preloader-animation"></div>
+            </div>
+        </div>
+
+        <div class="nk-preloader-skip">Skip</div>
+    </div>
+    <!-- END: Page Preloader -->
+
+    <!-- START: Page Video Background
+
+        Additional Attributes:
+            data-video - Youtube/Vimeo/self-hosted video urls.
+                self-hosted video example:
+                data-video="mp4:./video/local-video.mp4,webm:./video/local-video.webm,ogv:./video/local-video.ogv"
+            data-video-loop - loop video (true/false)
+            data-video-mute - mute video music (true/false)
+            data-video-volume - volume of video music (0-100)
+            data-video-start-time - video start time in seconds
+            data-video-end-time - video end time in seconds
+            data-video-pause-on-page-leave - pause video when the page not in focus (true/false)
+    -->
+    <div class="nk-page-background op-5" data-video="https://www.youtube.com/watch?v=Jr2C1rNJrFQ" data-video-loop="true" data-video-mute="true" data-video-volume="0" data-video-start-time="0" data-video-end-time="0" data-video-pause-on-page-leave="true" style="background-image: url('../public/images/page-background.jpg');"></div>
+    <!-- END: Page Background -->
+
+    <!--
+        START: Page Audio Background
+
+        Additional Attributes:
+            data-audio - URL to audio file
+            data-audio-volume - audio volume (0-100)
+            data-audio-autoplay - autoplay audio (true/false)
+            data-audio-loop - loop audio (true/false)
+            data-audio-pause-on-page-leave - pause video when the page not in focus (true/false)
+    -->
+    <div class="nk-page-background-audio d-none" data-audio="/mp3/purpleplanetmusic-desolation.mp3" data-audio-volume="100" data-audio-autoplay="true" data-audio-loop="true" data-audio-pause-on-page-leave="true"></div>
+    <!-- END: Page Background -->
+
+    <!-- START: Page Border -->
+    <div class="nk-page-border">
+        <div class="nk-page-border-t"></div>
+        <div class="nk-page-border-r"></div>
+        <div class="nk-page-border-b"></div>
+        <div class="nk-page-border-l"></div>
+    </div>
+    <!-- END: Page Border -->
+
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
